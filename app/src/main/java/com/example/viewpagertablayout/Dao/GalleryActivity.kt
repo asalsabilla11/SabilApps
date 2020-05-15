@@ -7,7 +7,7 @@ import androidx.room.Query
 import com.example.viewpagertablayout.Entity.GalleryEntitiy
 
 @Dao
-interface GalleryDao {
+interface GalleryActivity {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertDataDaily(dailyEntity: List<GalleryEntitiy>)
 

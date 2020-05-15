@@ -7,7 +7,7 @@ import androidx.room.Query
 import com.example.viewpagertablayout.Entity.MusicEntity
 
 @Dao
-interface MusicDao {
+interface MusicActivity {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertDataMusic(musicEntity: List<MusicEntity>)
 

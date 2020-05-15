@@ -10,12 +10,12 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical"
-       android:background="#2d2d2d"
+       android:background="@drawable/pink"
        android:layout_margin="32dp">
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:layout_gravity="center"
+           android:layout_gravity="center_horizontal"
            android:text="My Favorite Music"
            android:textSize="24sp"
            android:textColor="#00BCD4">

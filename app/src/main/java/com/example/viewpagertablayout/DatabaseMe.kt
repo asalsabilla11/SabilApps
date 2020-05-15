@@ -17,10 +17,10 @@ import com.example.viewpagertablayout.Entity.*
 abstract class DatabaseMe:RoomDatabase() {
 
     abstract fun dailyDao(): DailyActivity
-    abstract fun galleryDao(): GalleryDao
+    abstract fun galleryDao(): GalleryActivity
     abstract fun friendsListDao(): FriendsListDao
-    abstract fun musicDao(): MusicDao
-    abstract fun profileDao(): ProfileDao
+    abstract fun musicDao(): MusicActivity
+    abstract fun profileDao(): ProfileActivity
 
     companion object{
         @Volatile

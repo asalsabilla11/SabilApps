@@ -7,7 +7,7 @@ import androidx.room.Query
 import com.example.viewpagertablayout.Entity.ProfileEntity
 
 @Dao
-interface ProfileDao {
+interface ProfileActivity {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertDataProfile(profileEntity: List<ProfileEntity>)
 
