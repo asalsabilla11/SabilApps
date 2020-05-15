@@ -14,7 +14,7 @@ import com.example.viewpagertablayout.Entity.*
     FriendsListEntity::class,
     MusicEntity::class,
     ProfileEntity::class],version = 6)
-abstract class DatabaseAku:RoomDatabase() {
+abstract class DatabaseMe:RoomDatabase() {
 
     abstract fun dailyDao(): DailyActivity
     abstract fun galleryDao(): GalleryDao
@@ -24,16 +24,16 @@ abstract class DatabaseAku:RoomDatabase() {
 
     companion object{
         @Volatile
-        private var INSTANCE: DatabaseAku? = null
+        private var INSTANCE: DatabaseMe? = null
 
-        fun getInstance(context: Context): DatabaseAku =
+        fun getInstance(context: Context): DatabaseMe =
             INSTANCE?: synchronized(this){
                 INSTANCE?: buildDatabase(context).also{INSTANCE = it}
             }
 
         private fun buildDatabase(context: Context)=
             Room.databaseBuilder(context.applicationContext,
-                DatabaseAku::class.java,"databaseAku").fallbackToDestructiveMigration().build()
+                DatabaseMe::class.java,"databaseAku").fallbackToDestructiveMigration().build()
     }
 
 }

@@ -6,16 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.viewpagertablayout.DatabaseAku
+import com.example.viewpagertablayout.DatabaseMe
 import com.example.viewpagertablayout.Entity.ProfileEntity
 
 import com.example.viewpagertablayout.R
 import io.reactivex.Observable
-import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 /**
@@ -28,7 +26,7 @@ class ProfileFragment : Fragment() {
     }
 
     private var dp = CompositeDisposable()
-    private var db: DatabaseAku? = null
+    private var db: DatabaseMe? = null
     private var items :List<ProfileEntity> = ArrayList()
 
     override fun onCreateView(
@@ -41,7 +39,7 @@ class ProfileFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        db = DatabaseAku.getInstance(context)
+        db = DatabaseMe.getInstance(context)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

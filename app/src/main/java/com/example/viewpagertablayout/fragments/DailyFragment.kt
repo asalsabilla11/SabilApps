@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.viewpagertablayout.DatabaseAku
+import com.example.viewpagertablayout.DatabaseMe
 import com.example.viewpagertablayout.Entity.DailyAcitivtyEntity
 import com.example.viewpagertablayout.Entity.FriendsListEntity
 
@@ -26,7 +26,7 @@ import kotlinx.android.synthetic.main.fragment_daily.*
 class DailyFragment : Fragment() {
 
     private var dp = CompositeDisposable()
-    private var db: DatabaseAku? = null
+    private var db: DatabaseMe? = null
     private lateinit var dailyAdapter: DailyAdapter
     private lateinit var friendsAdapter: FriendsAdapter
 
@@ -44,7 +44,7 @@ class DailyFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        db = DatabaseAku.getInstance(context)
+        db = DatabaseMe.getInstance(context)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

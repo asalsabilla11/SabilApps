@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.viewpagertablayout.DatabaseAku
+import com.example.viewpagertablayout.DatabaseMe
 import com.example.viewpagertablayout.Entity.GalleryEntitiy
 
 import com.example.viewpagertablayout.R
@@ -29,7 +29,7 @@ class GalleryFragment : Fragment() {
 
     private val disposable = CompositeDisposable()
     private lateinit var galleryAdapter: GalleryAdapter
-    private var db: DatabaseAku? = null
+    private var db: DatabaseMe? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,7 +42,7 @@ class GalleryFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        db = DatabaseAku.getInstance(context)
+        db = DatabaseMe.getInstance(context)
 
     }
 
