@@ -10,21 +10,21 @@ class SetPagerDummy {
                 PagerModel(
                     "Title1",
                     "Description1",
-                    R.drawable.exploreme
+                    R.drawable.me
                 )
             )
             list.add(
                 PagerModel(
                     "Title2",
                     "Description2",
-                    R.drawable.content
+                    R.drawable.fav
                 )
             )
             list.add(
                 PagerModel(
                     "Title3",
                     "Description3",
-                    R.drawable.list
+                    R.drawable.mimpi
                 )
             )
             return list
